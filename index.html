@@ -1,175 +1,187 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝗥𝗲𝘅𝘇𝘆𝗦𝘁𝗼𝗿𝗲</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>𝗥𝗲𝘅𝘇𝘆𝗦𝘁𝗼𝗿𝗲</title>
 
-<style>
-body{
-    margin:0;
-    background:#12001f;
-    font-family: Arial, Helvetica, sans-serif;
-    color:#ffffff;
-}
+  <!-- Font dari DaFont: Blue Winter (pastikan file blue_winter.ttf ada di folder fonts/) -->
+  <style>
+    @font-face {
+      font-family: 'BlueWinter';
+      src: url('fonts/blue_winter.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-/* HEADER */
-.header{
-    background:linear-gradient(90deg,#5b21b6,#7c3aed);
-    padding:14px;
-    text-align:center;
-    font-weight:bold;
-    font-size:14px;
-    border-radius:0 0 20px 20px;
-}
+    body {
+      margin: 0;
+      font-family: 'BlueWinter', cursive;
+      background: #1a0630; /* UNGU TUA */
+      color: #ffffff; /* semua teks putih */
+      font-weight: bold; /* semua font bold */
+    }
 
-/* BANNER */
-.banner{
-    margin:15px;
-    border-radius:20px;
-    overflow:hidden;
-}
-.banner img{
-    width:100%;
-    display:block;
-}
+    .container {
+      max-width: 420px;
+      margin: auto;
+      padding: 10px;
+    }
 
-/* MENU GRID */
-.menu{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    padding:15px;
-}
-.menu-box{
-    background:linear-gradient(135deg,#6d28d9,#a78bfa);
-    border-radius:25px;
-    padding:15px;
-    text-align:center;
-}
-.menu-box img{
-    width:100%;
-    border-radius:20px;
-}
-.menu-box h3{
-    margin:10px 0 5px;
-    font-size:14px;
-    font-weight:bold;
-}
-.menu-box a{
-    display:inline-block;
-    background:#2e1065;
-    color:#fff;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:12px;
-    text-decoration:none;
-}
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
 
-/* TITLE */
-.title{
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-    margin:15px 0 5px;
-}
+    .banner img {
+      width: 100%;
+      display: block;
+    }
 
-/* ADMIN GRID */
-.admin-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    padding:15px;
-}
-.admin-box{
-    background:linear-gradient(135deg,#6d28d9,#a78bfa);
-    border-radius:25px;
-    padding:15px;
-    text-align:center;
-}
-.admin-box img{
-    width:100%;
-    border-radius:20px;
-}
-.admin-box p{
-    font-size:13px;
-    font-weight:bold;
-    margin:10px 0 5px;
-}
-.admin-box a{
-    display:inline-block;
-    background:#2e1065;
-    color:#fff;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:12px;
-    text-decoration:none;
-}
+    .section {
+      margin: 20px 0;
+      text-align: center;
+    }
 
-/* PARTNER */
-.partner{
-    margin:15px;
-    border-radius:20px;
-    overflow:hidden;
-}
-.partner img{
-    width:100%;
-    display:block;
-}
-</style>
+    .title {
+      font-size: 26px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(155, 92, 255, 0.25);
+      border: 2px solid #9b5cff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      opacity: 0.6; /* efek transparan */
+    }
+
+    .card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .card .text {
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 4px #000;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .card a {
+      background: #7a3cff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .footer-title {
+      font-size: 24px;
+      margin: 25px 0 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .partner {
+      background: linear-gradient(45deg, #b388ff, #7a3cff);
+      border-radius: 14px;
+      padding: 12px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
 
-<div class="header">
-𝐑𝐄𝐗𝐙𝐘 𝐒𝐓𝐎𝐑𝐄
-</div>
-
-<div class="banner">
-    <img src="https://i.supaimg.com/31bcad5a-f3a0-4c6b-b3d1-8d8bddc793db.png">
-</div>
-
-<div class="menu">
-    <div class="menu-box">
-        <img src="https://i.supaimg.com/85142ccb-e63b-4007-a7ad-6ec6d7a6435a.png">
-        <h3>𝗕𝗘𝗟𝗜 𝗗𝗔𝗡 𝗥𝗘𝗡𝗧𝗔𝗟 𝗔𝗞𝗨𝗡 𝗙𝗥𝗘𝗘 𝗙𝗜𝗥𝗘𝗘<br></h3>
-        <a href="https://rk9626567-ux.github.io/Rizky.Xxct"_blank">KLIK DISINI</a>
+    <!-- Banner utama -->
+    <div class="banner">
+      <a href="https://www.alwikobrastore.com">
+        <img src="https://i.ibb.co.com/TDBGYj9T/quality-restoration-20260126033149521.png" alt="Topup All Game">
+      </a>
     </div>
-    <div class="menu-box">
-        <img src="https://i.supaimg.com/85142ccb-e63b-4007-a7ad-6ec6d7a6435a.png">
-        <h3>𝗧𝗘𝗦𝗧𝗜𝗠𝗢𝗡<br>𝗥𝗘𝗫𝗭𝗬 𝗦𝗧𝗢𝗥𝗘</h3>
-        <a href="https://whatsapp.com/channel/0029VbBhtsTEwEjz1dAsCZ2b" target="_blank">KLIK DISINI</a>
+
+    <!-- Grid menu atas -->
+    <div class="grid">
+      <div class="card">
+        <img src="https://i.ibb.co.com/vxZrdBW7/DEXEL-ESPORT-78-CD1-EA.png" alt="Beli akun">
+        <div class="overlay">
+          <div class="text">𝗕𝗘𝗟𝗜 𝗗𝗔𝗡 𝗥𝗘𝗡𝗧𝗔𝗟</div>
+          <a href="https://rk9626567-ux.github.io/Rizky.Xxct/">KLIK DISINI</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.ibb.co.com/vxZrdBW7/DEXEL-ESPORT-78-CD1-EA.png" alt="Topup murah">
+        <div class="overlay">
+          <div class="text">𝗧𝗢𝗣𝗨𝗣 𝗔𝗟𝗟 𝗚𝗔𝗠𝗘</div>
+          <a href="https://www.alwikobrastore.com">KLIK DISINI</a>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class="title">NOMER ADMIN DI SINI</div>
-
-<div class="admin-grid">
-    <div class="admin-box">
-        <img src="https://i.supaimg.com/85142ccb-e63b-4007-a7ad-6ec6d7a6435a.png">
-        <p>WHATSAPP ADMIN<br>FREE FIRE DAN GRUP</p>
-        <a href="https://chat.whatsapp.com/CoXaSJVlzwu26gKISS1Cpu"_blank">CHAT ADMIN</a>
+    <!-- Nomor admin -->
+    <div class="section">
+      <div class="title">NOMER ADMIN DI SINI</div>
     </div>
-    <div class="admin-box">
-        <img src="https://i.supaimg.com/85142ccb-e63b-4007-a7ad-6ec6d7a6435a.png">
-        <p>WHATSAPP ADMIN<br>MLBB DAN ROBLOX</p>
-        <a href="https://wa.me/62895429491238" target="_blank">CHAT ADMIN</a>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://i.ibb.co.com/vxZrdBW7/DEXEL-ESPORT-78-CD1-EA.png" alt="WA FF">
+        <div class="overlay">
+          <div class="text">𝗚𝗥𝗨𝗣 𝗝𝗕 𝗥𝗘𝗫𝗭𝗬</div>
+          <a href="https://chat.whatsapp.com/D0cXycXfSrNC8hqq8jGvkX?mode=gi_t" target="_blank">CHAT WA</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.ibb.co.com/vxZrdBW7/DEXEL-ESPORT-78-CD1-EA.png" alt="WA ML">
+        <div class="overlay">
+          <div class="text">𝗧𝗘𝗦𝗧𝗜𝗠𝗢𝗡</div>
+          <a href="https://whatsapp.com/channel/0029VbBhtsTEwEjz1dAsCZ2b" target="_blank">CHAT WA</a>
+        </div>
+      </div>
     </div>
-</div>
 
+    <!-- Partner resmi -->
+    <div class="footer-title">PARTNER RESMI</div>
+    <div class="partner">
+      Cek Partner Resmi RexzyStor di sini
+    </div>
 
-  <!-- SPOTIFY ARTIST -->
-  <div class="spotify">
-    <iframe 
-      src="https://open.spotify.com/embed/artist/62mDZGBx9APuQGEoXFX6w5"
-      width="100%"
-      height="300"
-      frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-      style="border-radius:12px">
-    </iframe>
   </div>
-
 </body>
 </html>
